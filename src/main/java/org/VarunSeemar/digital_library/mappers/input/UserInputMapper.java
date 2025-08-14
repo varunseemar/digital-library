@@ -15,6 +15,7 @@ public class UserInputMapper {
                 .email(userInputEntity.getEmail())
                 .phoneNumber(userInputEntity.getPhoneNumber())
                 .password(userInputEntity.getPassword())
+                .role(userInputEntity.getRole())
                 .build();
     }
 }

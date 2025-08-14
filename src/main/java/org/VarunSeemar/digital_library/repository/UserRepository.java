@@ -35,6 +35,11 @@ public class UserRepository {
         return this.userOutputMapper.mapToModel(savedOutputEntity);
     }
 
+    public UserModel findUserByEmail(String email){
+        Optional<UserOutputEntity> optionalEntity = this.userJPARepository.findByEmail(email);
+        return optionalEntity.map(userOutputMapper::mapToModel).orElse(null);
+    }
+
     // This is for returning user output entity to the membership mapper.
 //    public UserOutputEntity findById(long id){
 //        Optional<UserOutputEntity> userOutputEntity= this.userJPARepository.findById(id);

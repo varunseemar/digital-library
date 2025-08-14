@@ -15,6 +15,7 @@ public class UserOutputMapper {
                 .email(userOutputEntity.getEmail())
                 .phoneNumber(userOutputEntity.getPhoneNumber())
                 .password(userOutputEntity.getPassword())
+                .role(userOutputEntity.getRole())
                 .build();
     }
 
@@ -27,6 +28,7 @@ public class UserOutputMapper {
                 .dob(userModel.getDob())
                 .phoneNumber(userModel.getPhoneNumber())
                 .password(userModel.getPassword())
+                .role(userModel.getRole())
                 .build();
     }
 }

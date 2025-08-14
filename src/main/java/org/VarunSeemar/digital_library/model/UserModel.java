@@ -1,6 +1,7 @@
 package org.VarunSeemar.digital_library.model;
 
 import lombok.*;
+import org.VarunSeemar.digital_library.enums.UserRole;
 
 import java.time.Instant;
 
@@ -17,4 +18,5 @@ public class UserModel {
     private String email;
     private String phoneNumber;
     private String password;
+    private UserRole role;
 }

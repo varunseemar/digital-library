@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.VarunSeemar.digital_library.enums.UserRole;
 
 import java.time.Instant;
 
@@ -38,6 +39,9 @@ public class UserOutputEntity {
     private String phoneNumber;
 
     @Column(name = "password",nullable = false)
-    @Size(min = 8,max = 15,message="Password must be between 8 and 50 characters")
+    @Size(min = 8,max = 100,message="Password must be between 8 and 50 characters")
     private String password;
+
+    @Column(name = "role", nullable = false)
+    private UserRole role;
 }
